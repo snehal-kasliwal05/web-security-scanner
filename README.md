@@ -110,7 +110,11 @@ python main.py
 
 ## Demo
 
-Sample output screenshots are available in the `demo/` folder.
+### Django Scan Output
+
+The scanner successfully detected a high severity XSS vulnerability in the Django test application:
+
+![Django Scan](demo/django_scan_output.png)
 
 ---
 
