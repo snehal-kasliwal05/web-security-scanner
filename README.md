@@ -50,16 +50,23 @@ The scanner is framework-agnostic and can be used to analyze applications develo
 
 ---
 
-## Django and Flask Relevance
+## Django and Flask Test Applications
 
-This scanner can be used to assess applications built with Django and Flask by:
+This project includes lightweight test applications built using Django and Flask to simulate real-world XSS-related scenarios.
 
-- Testing form input handling and validation logic  
-- Identifying improper use of templating that may lead to XSS  
-- Verifying security headers configured at the framework or server level  
-- Analyzing session and cookie security configurations  
+### Django Test App
+The Django test application includes:
+- safe and vulnerable template rendering examples
+- input handling for XSS testing
+- practical scenarios for validating scanner behavior
 
-Although Django provides built-in protections like auto-escaping and CSRF protection, and Flask allows flexible security configurations, misconfigurations can still introduce vulnerabilities. This tool helps identify such gaps.
+### Flask Test App
+The Flask test application includes:
+- a vulnerable route for unsafe input rendering
+- a safer route for comparison
+- simple test cases to observe XSS-related behavior
+
+These applications were used to validate scanner results and understand how vulnerabilities manifest across different frameworks.
 
 ---
 
@@ -68,7 +75,9 @@ Although Django provides built-in protections like auto-escaping and CSRF protec
 - Python  
 - Requests  
 - BeautifulSoup  
-- Regular Expressions  
+- Regular Expressions
+- Django
+- Flask
 
 ---
 
@@ -78,6 +87,9 @@ web-security-scanner/
 ├── scanner/
 ├── demo/
 ├── notebooks/
+├── test-apps/
+│   ├── flask_app/
+│   └── django_app/
 ├── main.py
 ├── requirements.txt
 └── README.md
@@ -108,8 +120,8 @@ Sample output screenshots are available in the `demo/` folder.
 * Explore how input validation impacts application security
 * Analyze the role of security headers and CSP
 * Study DOM-based XSS patterns and detection techniques
+* Build simple Django and Flask applications for security testing
 * Apply OWASP Top 10 concepts in practice
-
 ---
 
 ## Disclaimer
